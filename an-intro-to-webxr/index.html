@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebXR Tutorials</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119579558-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-119579558-1');
+    </script>
+</head>
+<body>
+    <section class="page">
+        <div id="holder">
+            <i class="material-icons" id="home" title="Home">home</i>
+            <i class="material-icons" id="invert" title="Invert Colors">invert_colors</i>
+        </div>
+        <h1>WebXR Tutorials</h1>
+        <h2>An introduction to WebXR.</h2>
+        <h3>What is WebXR?</h3>
+        <p>WebXR is a device API specification that allows Web Developers to create web-accessible immersive experiences for virtual reality and augmented reality devices. The goal is to standardize how WebXR sites are developed and experienced across as many browsers, headsets, and devices as possible.</p>
+        <p>WebXR originally began as the WebVR specification, an API needed to access VR display metrics with JavaScript. The WebVR API allows the web page's JavaScript to detect a VR device, get information from the device, and display the WebVR scene using WebGL. The WebVR API was implemented in Firefox, Chrome, Microsoft Edge, and a few other browsers. The now-deprecated WebVR specification can be found at the <a href="https://immersive-web.github.io/webvr/spec/1.1/">Immersive Web github</a>.</p>
+        <p>The WebVR API was a great start for the immersive web, but it didn't take into account the growing number of augmented reality devices that were on the horizon. What we as Web Developers need is a way to make our sites accessible by desktop browsers, VR devices, smartphones using ARKit or ARCore, and mixed reality headsets like the Microsoft Hololens and the upcoming Magic Leap One.</p>
+        <p>Because of this necessity, the <a href="https://github.com/immersive-web/webxr">Immersive Web group</a> has drafted a <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a> that will work towards satisfying the needs of virtual reality, augmented reality, and mixed reality devices.</p>
+        <p>The goal of the WebXR API is generally the same as the WebVR API, to allow external JavaScript to detect the device, query its capabilities, and serve up experiences that are on par with native applications. However, it is much more flexible, allowing the developer to immerse the user in a VR world or place items convincingly into the real world.</p>
+        <h3>Why build with WebXR in mind?</h3>
+        <p>Right now (May 2018), the WebXR API is in a highly experimental state, and is not stable in any current browsers. It is currently available as an origin trial in Google Chrome. Other mobile browsers will need to use a WebXR polyfill to work. So why should we start learning WebXR instead of WebVR, which is currently supported by major browsers?</p>
+        <p><a href="https://youtu.be/1t1gBVykneA">In a talk at Google I/O 2018</a>, WebXR Device API editor Brandon Jones spoke about the new capabilities of WebXR. WebXR offers optimizations over WebVR, such as double the pixels and a smoother experience at the same framerate of the older standard. However, because WebXR isn't widely available yet, we need to start off with the current technology and branch off from there.</p>
+        <p>This is the very edge of the immersive web, and while we'll start off these tutorials by focusing on the currently-stable WebVR standard, we'll quickly move on to some more experimental and bleeding-edge technology. We'll create some experiences that should work well on all devices before getting up close and personal with the experimental WebXR API.</p>
+        <h3>What we'll learn.</h3>
+        <p>In these tutorials we'll begin with the stable WebVR framework <a href="https://aframe.io/">A-Frame</a>. This framework, created by a team at Mozilla, is a battle-tested and easy way to begin working with WebVR. Once we're comfortable with that, we'll move on to <a href="https://threejs.org/">three.js</a>, the library on which A-Frame is built, which will allow us more flexibility. After that, we'll start experimenting with libraries like Google's <a href="https://github.com/google-ar/three.ar.js">three.ar.js</a> and finally WebXR and WebGL.</p>
+        <footer>
+            <p>Do you have a topic you’d like to see covered? An idea for a tutorial? If so, drop me a line at webxrtutorials@gmail.com.</p>
+        </footer>
+    </section>
+    <script src="/js/pagescripts.js"></script>
+</body>
+</html>

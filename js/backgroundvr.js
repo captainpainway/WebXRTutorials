@@ -1,14 +1,12 @@
 const scene = document.getElementById('bgScene');
 const rotator = document.getElementById('rotator');
 
-var number = 30;
-var angle = 0;
-var increase = Math.PI * 2 / number;
-for (var y = -20; y <= 20; y = y + 2) {
-    for (var i = 0; i < number; i++) {
-        var box = document.createElement('a-box');
-        var color = createColor(i);
-        box.setAttribute('material', 'shader: standard; color: #' + color);
+let number = 20;
+for (let x = -number; x <= number; x = x + 2) {
+    for (let y = -number; y <= number; y = y + 2) {
+        let box = document.createElement('a-box');
+        let color = createColor(y);
+        box.setAttribute('color', '#' + color);
 
         var animation = document.createElement('a-animation');
         animation.setAttribute('attribute', 'rotation');
@@ -18,13 +16,9 @@ for (var y = -20; y <= 20; y = y + 2) {
         animation.setAttribute('repeat', 'indefinite');
         animation.setAttribute('easing', 'linear');
 
-        var x = 10 * Math.cos(angle);
-        var z = 10 * Math.sin(angle);
-
-        box.setAttribute('position', x + ' ' + y + ' ' + z);
+        box.setAttribute('position', x + ' ' + y + ' -10');
         rotator.appendChild(box);
         box.appendChild(animation);
-        angle += increase;
     }
 }
 

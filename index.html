@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WebXR Tutorials</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="/js/aframe-v0.8.2.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119579558-1"></script>
     <script>
@@ -16,23 +16,16 @@
     </script>
 </head>
 <body>
-    <a-scene id="bgScene" embedded vr-mode-ui="enabled: false" antialias="enabled: true">
-        <a-light type="ambient" intensity="0.2"></a-light>
-        <a-entity id="camera" camera wasd-controls="enabled: false">
-            <a-light type="point" color="#ccffff" position="5 5 -5"></a-light>
-        </a-entity>
-        <a-entity id="rotator"></a-entity>
-        <a-sky color="#111"></a-sky>
-    </a-scene>
     <section class="page">
+        <div id="holder">
+            <i class="material-icons" id="invert" title="Invert Colors">invert_colors</i>
+        </div>
         <h1>WebXR Tutorials</h1>
         <p>Whether you’re looking to add an embedded 3D scene to your website, make your site more interactive with augmented reality, or create a fully-immersive virtual reality game, these are the tutorials to get you started!</p>
-        <p>If you’re new to WebXR, start here: <a href="#">What is WebXR?</a></p>
-        <p>These tutorials are intended for web developers who have some experience with HTML and basic JavaScript.</p>
+        <p>These tutorials are intended for Web Developers who have some experience with HTML and JavaScript. If you're not completely comfortable with JavaScript, but you are comfortable with HTML, try the A-Frame tutorials, which are more beginner-friendly.</p>
         <h2>Table of Contents:</h2>
         <ul>
-            <li>What is WebXR?</li>
-            <li>The WebXR Device API.</li>
+            <li><a href="/an-intro-to-webxr">An introduction to WebXR.</a></li>
             <li>A-Frame</li>
             <ul>
                 <li>Getting started.</li>
@@ -62,6 +55,6 @@
             <p>Do you have a topic you’d like to see covered? An idea for a tutorial? If so, drop me a line at webxrtutorials@gmail.com.</p>
         </footer>
     </section>
-    <script src="/js/backgroundvr.js"></script>
+    <script src="/js/pagescripts.js"></script>
 </body>
 </html>
