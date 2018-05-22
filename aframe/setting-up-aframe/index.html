@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebXR Tutorials - Setting up A-Frame</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119579558-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-119579558-1');
+    </script>
+</head>
+<body>
+<section class="page">
+    <div id="holder">
+        <i class="material-icons" id="home" title="Home">home</i>
+        <i class="material-icons" id="invert" title="Invert Colors">invert_colors</i>
+    </div>
+    <h1>WebXR Tutorials</h1>
+    <h2>Setting up A-Frame</h2>
+    <p>The first thing we're going to learn is how to correctly set up an HTML document to create a basic A-Frame scene with basic HTML elements.</p>
+    <p>The easiest way to get started with A-Frame is by linking to the latest build hosted on a CDN. A-Frame can also be imported with NPM as part of a workflow using Node.js, which we'll learn later. But for now, let's stick with the easier process.</p>
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;A-Frame Tutorial 1&lt;/title&gt;
+    &lt;script src="https://aframe.io/releases/0.8.0/aframe.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <p>After adding the script tag, we need to add a scene tag to the body of the HTML document. This is what the most basic A-Frame scene will look like:</p>
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;A-Frame Tutorial 1&lt;/title&gt;
+    &lt;script src="https://aframe.io/releases/0.8.0/aframe.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;a-scene&gt;&lt;/a-scene&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <p>Before we finish this first lesson, let's add a purple sky primitive to the scene so we have something to look at. The <a href="https://aframe.io/docs/0.8.0/primitives/a-sky.html">&lt;a-sky&gt;</a> primitive allows you to easily add a huge sphere to the scene. You can make the sphere a solid color, add a custom shader, or easily map an equirectangular image to the inside.</p>
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;A-Frame Tutorial 1&lt;/title&gt;
+    &lt;script src="https://aframe.io/releases/0.8.0/aframe.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;a-scene&gt;
+        &lt;a-sky color="#551A8B"&gt;&lt;/a-sky&gt;
+    &lt;/a-scene&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <p>This is what your WebVR scene should look like:</p>
+    <iframe class="vrScene" frameborder="0" src="vr1.html"></iframe>
+    <p>It's not much to look at yet, so in our next lesson we'll add a box primitive to our scene.</p>
+    <footer>
+        <p>Do you have a topic you’d like to see covered? An idea for a tutorial? If so, drop me a line at webxrtutorials@gmail.com.</p>
+    </footer>
+</section>
+<script src="/js/pagescripts.js"></script>
+<script src="/js/prism.js"></script>
+</body>
+</html>

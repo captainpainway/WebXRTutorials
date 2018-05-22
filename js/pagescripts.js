@@ -27,3 +27,14 @@ function invertColors() {
 function goHome() {
     window.location.href = '/';
 }
+
+window.addEventListener('resize', resizeWindow);
+
+function resizeWindow() {
+    let vrScene = document.querySelectorAll('.vrScene');
+    vrScene.forEach(scene => {
+        scene.style.width = '100%';
+        scene.style.height = scene.offsetWidth * 0.5 + 'px';
+    });
+}
+resizeWindow();
