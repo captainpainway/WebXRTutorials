@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WebXR Tutorials - Setting up A-Frame</title>
+    <title>Setting up A-Frame. | WebXR Tutorials</title>
+    <meta name="keywords" content="WebXR, WebVR, WebAR, A-Frame, three.js, 3D, web development, JavaScript">
+    <meta name="description" content="A step-by-step guide through the new world of WebXR, WebVR, and WebAR.">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="WebXR Tutorials">
+    <meta property="og:site_name" content="WebXR Tutorials">
+    <meta property="og:description" content="A step-by-step guide through the new world of WebXR, WebVR, and WebAR.">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/prism.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -23,54 +29,92 @@
         <i class="material-icons" id="invert" title="Invert Colors">invert_colors</i>
     </div>
     <h1>WebXR Tutorials</h1>
-    <h2>Setting up A-Frame</h2>
+    <h2>Setting up A-Frame.</h2>
+
     <p>The first thing we're going to learn is how to correctly set up an HTML document to create a basic A-Frame scene with basic HTML elements.</p>
+
     <p>The easiest way to get started with A-Frame is by linking to the latest build hosted on a CDN. A-Frame can also be imported with NPM as part of a workflow using Node.js, which we'll learn later. But for now, let's stick with the easier process.</p>
-    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;A-Frame Tutorial 1&lt;/title&gt;
-    &lt;script src="https://aframe.io/releases/0.8.0/aframe.min.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+
+    <pre><code class="language-html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;A-Frame Tutorial 1&lt;/title&gt;
+        &lt;script src="https://aframe.io/releases/0.9.0/aframe.min.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </code></pre>
+
     <p>After adding the script tag, we need to add a scene tag to the body of the HTML document. This is what the most basic A-Frame scene will look like:</p>
-    <pre><code class="language-html">&lt;body&gt;
-    &lt;a-scene&gt;&lt;/a-scene&gt;
-&lt;/body&gt;</code></pre>
-    <p>Before we finish this first lesson, let's add a purple sky primitive to the scene so we have something to look at. The <a href="https://aframe.io/docs/0.8.0/primitives/a-sky.html">&lt;a-sky&gt;</a> primitive allows you to easily add a huge sphere to the scene. You can make the sphere a solid color, add a custom shader, or easily map an equirectangular image to the inside.</p>
-    <pre><code class="language-html">&lt;body&gt;
-    &lt;a-scene&gt;
-        &lt;a-sky color="#551A8B"&gt;&lt;/a-sky&gt;
-    &lt;/a-scene&gt;
-&lt;/body&gt;</code></pre>
+
+    <pre><code class="language-html">
+    &lt;body&gt;
+        &lt;a-scene&gt;&lt;/a-scene&gt;
+    &lt;/body&gt;
+    </code></pre>
+
+    <p>Before we finish this first lesson, let's add a purple sky primitive to the scene so we have something to look at. The <a href="https://aframe.io/docs/0.9.0/primitives/a-sky.html">&lt;a-sky&gt;</a> primitive allows you to easily add a huge sphere to the scene. You can make the sphere a solid color, add a custom shader, or easily map an equirectangular image to the inside.</p>
+
+    <pre><code class="language-html">
+    &lt;body&gt;
+        &lt;a-scene&gt;
+            &lt;a-sky color="#551A8B"&gt;&lt;/a-sky&gt;
+        &lt;/a-scene&gt;
+    &lt;/body&gt;
+    </code></pre>
+
     <p>This is what your WebVR scene should look like:</p>
+
     <iframe class="vrScene" frameborder="0" src="vr1.html"></iframe>
+
     <p>That's very boring. Let's add an equirectangular image to the sky sphere so we feel like we're actually in a new place. An equirectangular image is one that maps cleanly to a sphere. It will look distorted as a regular image but will seamlessly wrap around the inside of our sky sphere.</p>
+
     <p>For this demo, we'll use this image I found on Wikimedia Commons:</p>
+
     <img src="img/1024px-Rosenkranz-Basilika.jpg">
+
     <p>Attribution: Ansgar Koreng / <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">CC BY-SA 4.0</a></p>
+
     <p>To add the equirectangular image to an A-Frame &lt;a-sky&gt; tag, all we have to do is add a src attribute to the element:</p>
-    <pre><code class="language-html">&lt;body&gt;
-    &lt;a-scene&gt;
-        &lt;a-sky src="/aframe/img/Rosenkranz-Basilika.jpg" color="#551A8B"&gt;&lt;/a-sky&gt;
-    &lt;/a-scene&gt;
-&lt;/body&gt;</code></pre>
+
+    <pre><code class="language-html">
+    &lt;body&gt;
+        &lt;a-scene&gt;
+            &lt;a-sky src="/aframe/img/Rosenkranz-Basilika.jpg" color="#551A8B"&gt;&lt;/a-sky&gt;
+        &lt;/a-scene&gt;
+    &lt;/body&gt;
+    </code></pre>
+
     <p>Now we have a scene that we can click and drag around on desktop, or explore with A-Frame's built-in orientation controls on mobile. It may take a minute to load the hi-res background image.</p>
+
     <iframe class="vrScene" frameborder="0" src="vr2.html"></iframe>
+
     <p>Now our scene is much more interesting, but everything is tinged purple! While that's a cool effect, it's a little dark, so let's remove the color attribute from the &lt;a-sky&gt; tag.</p>
-    <pre><code class="language-html">&lt;body&gt;
-    &lt;a-scene&gt;
-        &lt;a-sky src="/aframe/img/Rosenkranz-Basilika.jpg"&lt;/a-sky&gt;
-    &lt;/a-scene&gt;
-&lt;/body&gt;</code></pre>
+
+    <pre><code class="language-html">
+    &lt;body&gt;
+        &lt;a-scene&gt;
+            &lt;a-sky src="/aframe/img/Rosenkranz-Basilika.jpg"&lt;/a-sky&gt;
+        &lt;/a-scene&gt;
+    &lt;/body&gt;
+    </code></pre>
+
     <iframe class="vrScene" frameborder="0" src="vr3.html"></iframe>
+
     <p>Now that's better! We have a background, but our scene is still a little boring, so in our next lesson we'll add a box primitive to our scene.</p>
+
+    <h3>Documentation</h3>
+    <ul>
+        <li>&lt;a-sky&gt; primitive: <a href="https://aframe.io/docs/0.9.0/primitives/a-sky.html">https://aframe.io/docs/0.9.0/primitives/a-sky.html</a></li>
+    </ul>
+
     <footer>
         <div id="nav">
-            <a href="/an-intro-to-webxr/" class="left">< An Introduction to WebXR</a>
+            <a href="/an-intro-to-webxr/" class="left">< An Introduction to WebXR.</a>
+            <a href="/aframe/making-a-box/" class="right">Making a Box. ></a>
         </div>
         <p>Do you have a topic you’d like to see covered? An idea for a tutorial? If so, drop me a line at webxrtutorials@gmail.com.</p>
     </footer>

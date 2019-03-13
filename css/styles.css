@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins|Lora|Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat|Material+Icons');
 
 body {
     background: #fff;
-    font-family: 'Poppins';
+    font-family: 'Libre Baskerville';
     font-size: 18px;
     color: #111111;
     text-align: center;
@@ -39,7 +39,7 @@ a:hover {
 }
 
 p {
-    line-height: 1.5em;
+    line-height: 1.8em;
     text-align: left;
 }
 
@@ -54,12 +54,14 @@ footer {
 }
 
 h1 {
+    font-family: 'Montserrat';
     font-size: 2em;
     line-height: 1em;
     text-align: left;
 }
 
 h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
     text-align: left;
 }
 
@@ -89,9 +91,11 @@ img {
 }
 
 .left {
+    font-family: 'Montserrat';
     float: left;
 }
 
 .right {
+    font-family: 'Montserrat';
     float: right;
 }

@@ -16,7 +16,7 @@ invertButton.addEventListener('click', invertColors);
 
 function invertColors() {
     if (body.className === 'invert') {
-        body.className = ''
+        body.className = '';
         localStorage.setItem('invert', 'false');
     } else {
         body.className = 'invert';
