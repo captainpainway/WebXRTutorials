@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Making a box example 3</title>
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-sky src="/aframe/img/Rosenkranz-Basilika.jpg"></a-sky>
+        <a-box position="0 1 -3" color="#23A6C7" rotation="10 45 30"></a-box>
+    </a-scene>
+
+    <script type="text/javascript">
+        const scene = document.querySelector("a-scene"); // Finds the a-scene element.
+        const box = document.createElement("a-box"); // Creates an a-box element.
+
+        box.setAttribute("position", "-2 2 -3"); // Adds attributes to the box.
+        scene.appendChild(box); // Adds the box to the scene.
+    </script>
+</body>
+</html>

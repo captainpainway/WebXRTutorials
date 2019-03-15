@@ -14,11 +14,12 @@ body {
 }
 
 a {
-    color: #285db0;
+    color: #b06a2b;
+    word-wrap: break-word;
 }
 
 a:hover {
-    color: #285db0;
+    color: #ffc770;
 }
 
 .page {
@@ -60,6 +61,11 @@ h1 {
     text-align: left;
 }
 
+h1 a {
+    text-decoration: none;
+    color: #111111;
+}
+
 h2, h3, h4, h5, h6 {
     font-family: 'Montserrat';
     text-align: left;
@@ -84,6 +90,10 @@ img {
     cursor: pointer;
 }
 
+.material-icons:hover {
+    color: #ffc770;
+}
+
 #nav {
     width: 100%;
     float: left;
@@ -98,4 +108,10 @@ img {
 .right {
     font-family: 'Montserrat';
     float: right;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
 }
