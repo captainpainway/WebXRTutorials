@@ -86,18 +86,16 @@
 
     <p>That's very boring. Let's add an equirectangular image to the sky sphere so we feel like we're actually in a new place. An equirectangular image is one that maps cleanly to a sphere. It will look distorted as a regular image but will seamlessly wrap around the inside of our sky sphere.</p>
 
-    <p>For this demo, we'll use this image I found on Wikimedia Commons:</p>
+    <p>For this demo, we'll use this image from <a href="https://flic.kr/p/R12GBA">the U.S. Department of Agriculture on Flickr</a>:</p>
 
-    <img src="img/1024px-Rosenkranz-Basilika.jpg">
-
-    <p>Attribution: Ansgar Koreng / <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">CC BY-SA 4.0</a></p>
+    <img src="/aframe/img/background.jpg">
 
     <p>To add the equirectangular image to an A-Frame &lt;a-sky&gt; tag, all we have to do is add a src attribute to the element:</p>
 
     <pre><code class="language-html">
     &lt;body&gt;
         &lt;a-scene&gt;
-            &lt;a-sky src="/aframe/img/Rosenkranz-Basilika.jpg" color="#551A8B"&gt;&lt;/a-sky&gt;
+            &lt;a-sky src="/aframe/img/background.jpg" color="#551A8B"&gt;&lt;/a-sky&gt;
         &lt;/a-scene&gt;
     &lt;/body&gt;
     </code></pre>
@@ -111,7 +109,7 @@
     <pre><code class="language-html">
     &lt;body&gt;
         &lt;a-scene&gt;
-            &lt;a-sky src="/aframe/img/Rosenkranz-Basilika.jpg"&gt;&lt;/a-sky&gt;
+            &lt;a-sky src="/aframe/img/background.jpg"&gt;&lt;/a-sky&gt;
         &lt;/a-scene&gt;
     &lt;/body&gt;
     </code></pre>
