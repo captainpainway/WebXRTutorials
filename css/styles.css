@@ -66,6 +66,14 @@ h1 a {
     color: #111111;
 }
 
+.invert h1 a {
+    color: #ffffff;
+}
+
+.invert h1 a:hover {
+    color: #ffc770;
+}
+
 h2, h3, h4, h5, h6 {
     font-family: 'Montserrat';
     text-align: left;
